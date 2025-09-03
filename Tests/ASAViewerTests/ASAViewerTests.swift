@@ -29,3 +29,25 @@ import Testing
     // We expect the 'assetId' of the fetched object to be the same as the one we requested.
     #expect(assetDetail.assetID == usdcAssetID)
 }
+
+@Test func allASA() async throws {
+    let service: ASAService = ASAService()
+    var isFetching: Bool = true
+    var next: String? = nil
+
+    while isFetching {
+        do {
+            print("Next: \(String(describing: next))")
+            let assetList = try await service.fetchAssets(page: next)
+
+            next = assetList.next
+
+            if next == nil {
+                isFetching = false
+            }
+        } catch {
+            isFetching = false
+
+        }
+    }
+}
