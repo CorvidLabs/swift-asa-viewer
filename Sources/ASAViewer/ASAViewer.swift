@@ -4,6 +4,8 @@ import SwiftUI
 public struct ASAViewer: View {
     @ObservedObject private var viewModel: ASAViewerViewModel = ASAViewerViewModel()
 
+    public init() {}
+
     public var body: some View {
         Group {
             if viewModel.assets.isEmpty {

@@ -1,6 +1,7 @@
 import AppState
 import SwiftUI
 
+@MainActor
 class ASAViewerViewModel: ObservableObject {
     private let service: ASAService = ASAService()
 
@@ -21,7 +22,6 @@ class ASAViewerViewModel: ObservableObject {
 
     private var next: String?
 
-    @MainActor
     func load() async {
         do {
             let assetList = try await service.fetchAssets(page: next)
