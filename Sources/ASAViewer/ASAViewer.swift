@@ -38,10 +38,8 @@ public struct ASAViewer: View {
                         }
                     }
 
-                    if
-                        viewModel.assets.isEmpty == false,
-                        viewModel.assets.last?.assetID == asset.assetID
-                    {
+                    if !viewModel.assets.isEmpty,
+                       viewModel.assets.last?.assetID == asset.assetID {
                         ProgressView()
                             .task {
                                 await viewModel.load()
@@ -59,8 +57,6 @@ public struct ASAViewer: View {
 }
 
 #Preview {
-    let _ = Application.logging(isEnabled: true)
-
     NavigationStack {
         ASAViewer()
     }

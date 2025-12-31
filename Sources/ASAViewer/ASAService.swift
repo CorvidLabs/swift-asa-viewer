@@ -1,6 +1,6 @@
 import Foundation
 
-struct ASAService {
+public struct ASAService: ASAServiceProtocol, Sendable {
     enum ASAEndpoint {
         enum ASAEndpointError: Error {
             case invalidURL(String)
@@ -25,13 +25,12 @@ struct ASAService {
         }
     }
 
-    func fetchAssets(page: String? = nil) async throws -> AssetList {
+    public init() {}
+
+    public func fetchAssets(page: String? = nil) async throws -> AssetList {
         let assetsURL: URL
 
-        if
-            let page,
-            let pageURL = URL(string: page)
-        {
+        if let page, let pageURL = URL(string: page) {
             assetsURL = pageURL
         } else if let url = ASAEndpoint.list.url {
             assetsURL = url
@@ -61,7 +60,7 @@ struct ASAService {
         }
     }
 
-    func fetchAssetDetail(_ id: Int) async throws -> Asset {
+    public func fetchAssetDetail(_ id: Int) async throws -> Asset {
         guard let url = ASAEndpoint.detail(id).url else {
             throw ASAEndpoint.ASAEndpointError.invalidURL(ASAEndpoint.detail(id).url?.absoluteString ?? "unknown(\(id))")
         }

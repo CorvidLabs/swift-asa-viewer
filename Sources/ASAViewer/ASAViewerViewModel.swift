@@ -3,7 +3,7 @@ import SwiftUI
 
 @MainActor
 class ASAViewerViewModel: ObservableObject {
-    private let service: ASAService = ASAService()
+    private let service: any ASAServiceProtocol
 
     @Published private(set) var assets: [Asset] = []
     @Published var searchQuery: String = ""
@@ -21,6 +21,10 @@ class ASAViewerViewModel: ObservableObject {
     }
 
     private var next: String?
+
+    init(service: any ASAServiceProtocol = ASAService()) {
+        self.service = service
+    }
 
     func load() async {
         do {

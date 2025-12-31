@@ -32,7 +32,7 @@ struct ASADetailView: View {
                     DetailRow(title: "Verification", value: asset.verificationTier.capitalized)
                     DetailRow(title: "Decimals", value: "\(asset.fractionDecimals)")
                     DetailRow(title: "Total Supply", value: asset.totalSupplyAsStr)
-                    
+
                     if let circulatingSupply = asset.circulatingSupply {
                         DetailRow(title: "Circulating Supply", value: circulatingSupply)
                     }

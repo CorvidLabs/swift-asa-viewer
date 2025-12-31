@@ -24,7 +24,7 @@ jobs:
         run: |
           xcodebuild docbuild \
             -scheme ASAViewer \
-            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            -destination 'generic/platform=iOS Simulator' \
             -derivedDataPath ./derivedData
       - name: Process documentation
         run: |
