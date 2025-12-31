@@ -18,12 +18,18 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
       - name: Build documentation
         run: |
-          swift package --allow-writing-to-directory ./docs \
-            generate-documentation --target ASAViewer \
-            --disable-indexing \
-            --transform-for-static-hosting \
+          xcodebuild docbuild \
+            -scheme ASAViewer \
+            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            -derivedDataPath ./derivedData
+      - name: Process documentation
+        run: |
+          $(xcrun --find docc) process-archive transform-for-static-hosting \
+            ./derivedData/Build/Products/Debug-iphonesimulator/ASAViewer.doccarchive \
             --hosting-base-path swift-asa-viewer \
             --output-path ./docs
       - name: Upload artifact

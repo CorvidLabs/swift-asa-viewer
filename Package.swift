@@ -5,8 +5,7 @@ import PackageDescription
 let package = Package(
     name: "ASAViewer",
     platforms: [
-        .iOS(.v16),
-        .macOS(.v11)
+        .iOS(.v16)
     ],
     products: [
         .library(
