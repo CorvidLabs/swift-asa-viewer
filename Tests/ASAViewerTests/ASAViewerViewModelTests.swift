@@ -139,3 +139,87 @@ func loadHandlesError() async {
     #expect(viewModel.assets.isEmpty)
     #expect(await mockService.fetchAssetsCallCount == 1)
 }
+
+@Test
+@MainActor
+func loadingStateStartsIdle() async {
+    let mockService = MockASAService()
+    let viewModel = ASAViewerViewModel(service: mockService)
+
+    #expect(viewModel.loadingState == .idle)
+}
+
+@Test
+@MainActor
+func loadSetsLoadedStateOnSuccess() async {
+    let mockService = MockASAService()
+    await mockService.setAssetsToReturn(AssetList(
+        results: [Asset(assetID: 1, name: "Test")]
+    ))
+
+    let viewModel = ASAViewerViewModel(service: mockService)
+    await viewModel.load()
+
+    #expect(viewModel.loadingState == .loaded)
+}
+
+@Test
+@MainActor
+func loadSetsErrorStateOnFailure() async {
+    let mockService = MockASAService()
+    await mockService.setError(URLError(.notConnectedToInternet))
+
+    let viewModel = ASAViewerViewModel(service: mockService)
+    await viewModel.load()
+
+    if case .error(let message) = viewModel.loadingState {
+        #expect(!message.isEmpty)
+    } else {
+        Issue.record("Expected error state, got \(viewModel.loadingState)")
+    }
+}
+
+@Test
+@MainActor
+func retryAfterErrorLoadsAgain() async {
+    let mockService = MockASAService()
+    await mockService.setError(URLError(.notConnectedToInternet))
+
+    let viewModel = ASAViewerViewModel(service: mockService)
+    await viewModel.load()
+
+    #expect(viewModel.assets.isEmpty)
+
+    await mockService.setError(nil)
+    await mockService.setAssetsToReturn(AssetList(
+        results: [Asset(assetID: 1, name: "Test")]
+    ))
+    await viewModel.load()
+
+    #expect(viewModel.assets.count == 1)
+    #expect(viewModel.loadingState == .loaded)
+    #expect(await mockService.fetchAssetsCallCount == 2)
+}
+
+@Test
+@MainActor
+func paginationRequestsNextPage() async {
+    let mockService = MockASAService()
+    let nextURL = "https://api.example.com/page2?cursor=abc"
+    await mockService.setAssetsToReturn(AssetList(
+        next: nextURL,
+        results: [Asset(assetID: 1, name: "Asset 1")]
+    ))
+
+    let viewModel = ASAViewerViewModel(service: mockService)
+    await viewModel.load()
+
+    #expect(await mockService.lastRequestedPage == nil)
+
+    await mockService.setAssetsToReturn(AssetList(
+        results: [Asset(assetID: 2, name: "Asset 2")]
+    ))
+    await viewModel.load()
+
+    #expect(await mockService.lastRequestedPage == nextURL)
+}

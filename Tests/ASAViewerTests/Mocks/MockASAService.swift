@@ -18,7 +18,7 @@ actor MockASAService: ASAServiceProtocol {
         self.assetDetailToReturn = asset
     }
 
-    func setError(_ error: Error) {
+    func setError(_ error: Error?) {
         self.errorToThrow = error
     }
 

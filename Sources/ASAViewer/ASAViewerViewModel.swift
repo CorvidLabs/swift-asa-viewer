@@ -1,23 +1,38 @@
 import AppState
 import SwiftUI
 
+/// Represents the loading state of the asset list
+public enum LoadingState: Equatable, Sendable {
+    case idle
+    case loading
+    case loaded
+    case error(String)
+}
+
 @MainActor
 class ASAViewerViewModel: ObservableObject {
     private let service: any ASAServiceProtocol
 
     @Published private(set) var assets: [Asset] = []
+    @Published private(set) var loadingState: LoadingState = .idle
     @Published var searchQuery: String = ""
 
-    var listItems: [Asset] {
-        if searchQuery.isEmpty {
-            return assets
-        } else {
-            let searchText = searchQuery.lowercased()
+    private var cachedFilteredItems: [Asset] = []
+    private var lastSearchQuery: String = ""
 
-            return assets.filter { asset in
-                asset.name.lowercased().contains(searchText)
+    var listItems: [Asset] {
+        if searchQuery == lastSearchQuery && !cachedFilteredItems.isEmpty {
+            return cachedFilteredItems
+        }
+        lastSearchQuery = searchQuery
+        if searchQuery.isEmpty {
+            cachedFilteredItems = assets
+        } else {
+            cachedFilteredItems = assets.filter { asset in
+                asset.name.localizedCaseInsensitiveContains(searchQuery)
             }
         }
+        return cachedFilteredItems
     }
 
     private var next: String?
@@ -27,13 +42,15 @@ class ASAViewerViewModel: ObservableObject {
     }
 
     func load() async {
+        loadingState = assets.isEmpty ? .loading : .loaded
         do {
             let assetList = try await service.fetchAssets(page: next)
-
-            // This needs to be on the main actor! (UI Update)
             assets.append(contentsOf: assetList.results)
             next = assetList.next
+            cachedFilteredItems = []
+            loadingState = .loaded
         } catch {
+            loadingState = .error(error.localizedDescription)
             Application.logger.error("\(error.localizedDescription)")
         }
     }
