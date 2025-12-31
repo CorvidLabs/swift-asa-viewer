@@ -39,9 +39,26 @@ struct ASAService {
             throw ASAEndpoint.ASAEndpointError.invalidURL(ASAEndpoint.list.url?.absoluteString ?? "unknown")
         }
 
-        let (data, _) = try await URLSession.shared.data(from: assetsURL)
+        guard var components = URLComponents(url: assetsURL, resolvingAgainstBaseURL: false) else {
+            throw ASAEndpoint.ASAEndpointError.invalidURL(assetsURL.absoluteString)
+        }
 
-        return try JSONDecoder().decode(AssetList.self, from: data)
+        components.queryItems = [
+            URLQueryItem(name: "limit", value: "1000")
+        ]
+
+        guard let url = components.url else {
+            throw ASAEndpoint.ASAEndpointError.invalidURL(components.string ?? "unknown")
+        }
+
+        let (data, _) = try await URLSession.shared.data(from: url)
+
+        do {
+            let list = try JSONDecoder().decode(AssetList.self, from: data)
+            return list
+        } catch {
+            throw error
+        }
     }
 
     func fetchAssetDetail(_ id: Int) async throws -> Asset {
