@@ -123,4 +123,4 @@ https://corvidlabs.github.io/swift-asa-viewer/
 
 ## License
 
-MIT License - Copyright 2025 Corvid Labs
+MIT License - Copyright 2026 Corvid Labs
