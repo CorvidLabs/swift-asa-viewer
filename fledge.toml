@@ -1,0 +1,8 @@
+[tasks]
+build = "xcodebuild build -quiet -scheme ASAViewer -destination 'generic/platform=iOS Simulator'"
+test = 'DEVICE=$(xcrun simctl list devices available | grep -oE "iPhone [0-9]+ " | head -1 | xargs) && xcodebuild test -quiet -scheme ASAViewer -destination "platform=iOS Simulator,name=$DEVICE"'
+lint = "swiftlint --strict"
+
+[lanes.verify]
+description = "Lint, build, and run ASA Viewer unit and live Pera API integration tests"
+steps = ["lint", "build", "test"]
