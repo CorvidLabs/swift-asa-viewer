@@ -5,5 +5,9 @@ artifact: plan
 
 # Plan
 
-1. Adopt SpecSync 5 with an explicit no-spec-change rationale.\n2. Install all four agent integrations.\n3. Add Fledge verification mirroring existing SwiftLint, build, and test behavior.\n4. Add immutable Trust without changing existing CI, Codecov, live tests, or DocC Pages.\n5. Validate locally and in hosted Actions.
+1. Adopt SpecSync 5 with an explicit no-spec-change rationale.
+2. Install all four agent integrations.
+3. Add Fledge verification mirroring existing SwiftLint, build, and test behavior.
+4. Add immutable Trust without changing existing CI, Codecov, live tests, or DocC Pages.
+5. Validate locally and in hosted Actions.
 

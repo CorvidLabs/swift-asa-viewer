@@ -5,5 +5,9 @@ artifact: testing
 
 # Testing
 
-- Run SwiftLint in strict mode.\n- Build ASAViewer for a generic iOS simulator.\n- Run all tests on a dynamically selected available iPhone simulator.\n- Preserve the live Pera Wallet API integration tag and boundary.\n- Run SpecSync strict validation, agent status, Trust doctor, and Trust verify.
+- Run SwiftLint in strict mode.
+- Build ASAViewer for a generic iOS simulator.
+- Run all tests on a dynamically selected available iPhone simulator.
+- Preserve the live Pera Wallet API integration tag and boundary.
+- Run SpecSync strict validation, agent status, Trust doctor, and Trust verify.
 
