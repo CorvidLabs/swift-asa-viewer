@@ -1,6 +1,6 @@
 ---
 id: CHG-0001-adopt-specsync-5-0-1-and-trust-1-0-0-governance-for-swift-asa-viewer
-state: draft
+state: accepted
 type: migration
 base_commit: 67fe31cece9999baa92c449f7a887dc5a3ae183f
 ---
@@ -17,7 +17,7 @@ Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for Swift ASA Viewer
 
 ## Acceptance Criteria
 
-- SpecSync strict validation passes at advisory threshold 0; all four agents report installed; Trust doctor and native verification pass; SwiftLint iOS simulator build unit tests and live Pera API integration tests pass; the existing coverage upload and DocC Pages workflow remain intact.
+- SpecSync strict validation passes at 100 percent coverage; all four agents report installed; Trust doctor and native verification pass; SwiftLint iOS simulator build unit tests and live Pera API integration tests pass; the existing coverage upload and DocC Pages workflow remain intact.
 
 ## No-spec Rationale
 

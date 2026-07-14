@@ -35,8 +35,7 @@
   ],
   "ignored_paths": [],
   "verification_commands": [
-    "xcodebuild build -quiet -scheme ASAViewer -destination 'generic/platform=iOS Simulator'",
-    "swiftlint --strict"
+    "fledge lanes run verify"
   ],
   "custom_artifacts": {},
   "principles_file": null

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "CHG-0002-document-the-existing-swift-asa-viewer-api-at-complete-specsync-coverage",
+  "slug": "document-the-existing-swift-asa-viewer-api-at-complete-specsync-coverage",
+  "title": "Document the existing Swift ASA Viewer API at complete SpecSync coverage",
+  "description": "Document the existing Swift ASA Viewer API at complete SpecSync coverage",
+  "kind": "documentation",
+  "state": "accepted",
+  "base_commit": "ae9fa7bce2c8725117238978ab012c6dd1423b31",
+  "created_at": 1784002037,
+  "updated_at": 1784002509,
+  "affected_specs": [
+    "asa-viewer"
+  ],
+  "affected_paths": [
+    "specs/asa-viewer",
+    ".trust.toml"
+  ],
+  "no_spec_change": false,
+  "no_spec_change_rationale": null,
+  "acceptance_criteria": [
+    "An active canonical companion covers all eleven Swift implementation files and every parser-visible export at 100 percent; source-backed requirements map Pera service access asset models pagination view-model state filtering detail presentation and remote images to unit or live integration evidence; strict SpecSync scores A without scaffolds; Sources and Tests remain unchanged"
+  ],
+  "selected_artifacts": [
+    "context",
+    "docs"
+  ],
+  "dependencies": [],
+  "answers": {
+    "architecture_risk": "no",
+    "public_contract": "no"
+  }
+}

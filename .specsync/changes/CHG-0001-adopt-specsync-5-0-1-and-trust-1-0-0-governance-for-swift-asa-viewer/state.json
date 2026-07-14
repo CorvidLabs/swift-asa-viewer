@@ -5,10 +5,10 @@
   "title": "Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for Swift ASA Viewer",
   "description": "Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for Swift ASA Viewer",
   "kind": "migration",
-  "state": "draft",
+  "state": "accepted",
   "base_commit": "67fe31cece9999baa92c449f7a887dc5a3ae183f",
   "created_at": 1783885421,
-  "updated_at": 1783885445,
+  "updated_at": 1784002596,
   "affected_specs": [],
   "affected_paths": [
     "Sources/",
@@ -27,7 +27,7 @@
   "no_spec_change": true,
   "no_spec_change_rationale": "This migration changes governance and CI orchestration only; Swift ASA Viewer public APIs, iOS behavior, live Pera API integration boundary, and DocC publication are unchanged, and no canonical spec currently exists.",
   "acceptance_criteria": [
-    "SpecSync strict validation passes at advisory threshold 0; all four agents report installed; Trust doctor and native verification pass; SwiftLint iOS simulator build unit tests and live Pera API integration tests pass; the existing coverage upload and DocC Pages workflow remain intact."
+    "SpecSync strict validation passes at 100 percent coverage; all four agents report installed; Trust doctor and native verification pass; SwiftLint iOS simulator build unit tests and live Pera API integration tests pass; the existing coverage upload and DocC Pages workflow remain intact."
   ],
   "selected_artifacts": [
     "context",

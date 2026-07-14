@@ -1,0 +1,25 @@
+{
+  "timestamp": 1784002501,
+  "commit": "ae9fa7bce2c8725117238978ab012c6dd1423b31",
+  "contract_digest": "b88fed6962060d72e10b68b7f7e130488f45ec5dbfc3f7ac352075a11088a0f6",
+  "workspace_digest": "e9ce114dc0fbb18e7633eb01b68411af8b81b4e6df1a4b8efadb7376c078008d",
+  "acceptance_input_digest": "fb7267909a1987c5ff2a4a3bac7b81dc06c0f70c499e505b2328a0d457e105af",
+  "passed": true,
+  "commands": [
+    {
+      "command": "fledge lanes run verify",
+      "success": true,
+      "exit_code": 0
+    }
+  ],
+  "requirement_ids": [
+    "REQ-asa-viewer-001",
+    "REQ-asa-viewer-002",
+    "REQ-asa-viewer-003",
+    "REQ-asa-viewer-004",
+    "REQ-asa-viewer-005",
+    "REQ-asa-viewer-006",
+    "REQ-asa-viewer-007",
+    "REQ-asa-viewer-008"
+  ]
+}

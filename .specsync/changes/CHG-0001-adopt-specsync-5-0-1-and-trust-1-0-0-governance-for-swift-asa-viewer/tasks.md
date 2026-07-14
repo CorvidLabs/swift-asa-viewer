@@ -5,9 +5,9 @@ artifact: tasks
 
 # Tasks
 
-- [x] Adopt SpecSync 5.0.1 at advisory threshold 0.
+- [x] Adopt SpecSync 5.0.1 at complete contract coverage.
 - [x] Install Claude, Cursor, Codex, and Gemini integrations.
 - [x] Add Fledge, Trust, Augur, and Attest policy.
 - [x] Preserve simulator CI, Codecov, live Pera integration tests, and DocC Pages.
-- [ ] Obtain owner definition and closing approvals.
-
+- [x] Complete migration configuration and source-backed inputs before approval.
+- [x] Configure native verification without claiming hosted success early.
