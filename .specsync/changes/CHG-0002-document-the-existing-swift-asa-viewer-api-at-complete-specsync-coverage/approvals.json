@@ -1,0 +1,18 @@
+{
+  "approvals": [
+    {
+      "gate": "definition",
+      "actor": "user:0xLeif",
+      "timestamp": 1784002324,
+      "digest": "b88fed6962060d72e10b68b7f7e130488f45ec5dbfc3f7ac352075a11088a0f6",
+      "note": "Definition approved after all eleven source files, exports, requirements, and deterministic/live boundaries were documented; closing approval remains pending native verification."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1784002509,
+      "digest": "b291d10675ef8c1db0c3ef23ef68ba1a749a3d0d3c4a6884b163031369f60874",
+      "note": "Closing approval recorded after strict 100 percent SpecSync validation and the native Fledge lane passed SwiftLint, iOS simulator build, all 19 deterministic tests, and both tagged read-only live Pera tests."
+    }
+  ]
+}

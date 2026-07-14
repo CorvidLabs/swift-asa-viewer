@@ -1,0 +1,18 @@
+{
+  "approvals": [
+    {
+      "gate": "definition",
+      "actor": "user:0xLeif",
+      "timestamp": 1784002323,
+      "digest": "d3ac3bc326ba16da17482d046eb82395fc50e20d786257e7df436c058bef7ac6",
+      "note": "Definition approved after governance configuration and source-backed inputs were completed; hosted CI and closing approval remain pending."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1784002596,
+      "digest": "b7cc26d75fb16756ae3825b6bfbc7283fca91b5ab03206f51ae158f400354fc5",
+      "note": "Closing approval recorded after the canonical delta was applied, strict SpecSync remained at 100 percent, and the native Fledge lane passed SwiftLint, iOS simulator build, all 19 deterministic tests, and both tagged read-only live Pera tests."
+    }
+  ]
+}
