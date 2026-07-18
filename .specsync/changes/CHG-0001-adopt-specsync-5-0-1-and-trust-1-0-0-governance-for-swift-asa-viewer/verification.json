@@ -1,9 +1,334 @@
 {
-  "timestamp": 1784002551,
-  "commit": "ae9fa7bce2c8725117238978ab012c6dd1423b31",
-  "contract_digest": "d3ac3bc326ba16da17482d046eb82395fc50e20d786257e7df436c058bef7ac6",
-  "workspace_digest": "05f13673a03a0a65598148f90aa6aaccb9f1510a3fd367f56deee03a0cf058b3",
-  "acceptance_input_digest": "4146372075ca479de672f4a17978138524255970ab9377308b671d9fc532cb6b",
+  "timestamp": 1784414235,
+  "commit": "13995eb2d693c8e5e6d7624f056485ad8a736dbe",
+  "contract_digest": "1762859ad9d59372f12d3183daffe0ca3099acab1b084ce9a3c91d3ff7d79795",
+  "workspace_digest": "f92871ea0339b926686b05119c478132737d14e8aeb6979e48357b75b3821b04",
+  "acceptance_input_digest": "9564cf2c219fe164e607e616250bd3be765d44576a341386bbe476d96696f677",
+  "acceptance_manifest": {
+    "schema_version": 1,
+    "entries": [
+      {
+        "path": ".attest.json",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "2581fe52873327db0bbac357a5102a0dbb18a1eea5a690b7b75eaa571e50cf65",
+        "entry_digest": "2904a18e18582f191a1d359d16e7bc61a7596ac77f62e55a94de56b3da8c796e",
+        "owners": [
+          "@exact:delivery"
+        ]
+      },
+      {
+        "path": ".augur.toml",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "17f6ad5b84b4db012f0e3f398a96a478c1324fd47e72e1dd2a13c7cf9a432983",
+        "entry_digest": "bac13c952da05292bdd0af5849aad9d9def3ae5afc830fa42b6914b2fd874beb",
+        "owners": [
+          "@exact:delivery"
+        ]
+      },
+      {
+        "path": ".github/workflows/docs.yml",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "61968f49bc12abbe200c188470777a855aa875cb28c9cac3adeaf909ce50fe13",
+        "entry_digest": "d8c2360b95ecbe0903353237e526816f00848c593a011eacaabe3f8b94dc03a1",
+        "owners": [
+          "@exact:delivery"
+        ]
+      },
+      {
+        "path": ".github/workflows/macOS.yml",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "dfdfc0ce62d0985c523fd306ffa98f5f6cd69c4bd36fbe25aa41030621ce3a27",
+        "entry_digest": "db1c7a090d141eadd30df14917e142a130f8ebc514a1786c44d254b9b8d0309f",
+        "owners": [
+          "@exact:delivery"
+        ]
+      },
+      {
+        "path": ".github/workflows/trust.yml",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "bf32e82c38bd60045a7a68a49b613cd16bf65e7ee7ada2e6ee1412f995173293",
+        "entry_digest": "12f0a528afacbc2b60762c19127ae710e408bb4b3d6434331122a24a01a0ac8d",
+        "owners": [
+          "@exact:delivery"
+        ]
+      },
+      {
+        "path": ".specsync/.gitignore",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "a505253bd2fdfb84f8121e89e48bbc67144082b5a88f439ee6acfb45424799b0",
+        "entry_digest": "ec3b8bd021ac6ac36ddfba3d0d6b84535be8074b917e9bffa050216e422d1792",
+        "owners": [
+          "@exact:delivery"
+        ]
+      },
+      {
+        "path": ".specsync/adoption-report.json",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "18c29514cfcf0e2bc7a285eab249504765e0ba4e96ad8b556455123d76348dc0",
+        "entry_digest": "58f57492651c8bdb2703d6291cef4ba62e62c2404c11482d0671a1fdd3d0e61e",
+        "owners": [
+          "@exact:delivery"
+        ]
+      },
+      {
+        "path": ".specsync/config.toml",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "73de5bc8fdc419a5cd499845e040e3ec687f0ed7eb1dcbaa0777e0caf204e883",
+        "entry_digest": "5ebdc88fc9417e9faf562ad7da3c042f99e8b2808cdf50d99790df44abdfa02f",
+        "owners": [
+          "@exact:delivery"
+        ]
+      },
+      {
+        "path": ".specsync/registry.toml",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "a86fc370998a0ca0654dc277ac0b63efcf285cf4905f49e8a01e27e6d2286499",
+        "entry_digest": "2a32655a05ca03414e6d34baa172af5888e9dd3a08c35e3a140c06be47827650",
+        "owners": [
+          "@exact:delivery"
+        ]
+      },
+      {
+        "path": ".specsync/sdd.json",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "dde92b981205204bea3391d84dfeed46b5050b99453342708a70b83e63ba6310",
+        "entry_digest": "46524716a3c229174ec04d8a152b752a45e8e8592c591f1299a7b81d8e7df9eb",
+        "owners": [
+          "@exact:delivery"
+        ]
+      },
+      {
+        "path": ".specsync/version",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "23b6867924dfeb9cf532753438dc919669bf93ad88215e11c15630a4acbf4299",
+        "entry_digest": "339b5f88be30302336707baa5dab61fd4b324d04e495d3bb772cf893fb4f73bc",
+        "owners": [
+          "@exact:delivery"
+        ]
+      },
+      {
+        "path": ".swiftlint.yml",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "d9327cc6d34efe32cf5e8a7699fd28393723f1333af33560b805606d47328fe7",
+        "entry_digest": "b8f4d26ad3d19e19d9461fb50931dfdeb29baad2ed213d2d05117e936783ca09",
+        "owners": [
+          "@exact:delivery"
+        ]
+      },
+      {
+        "path": ".trust.toml",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "5dca7da62a1750b73b35f350d20d74b8490b14fae6a0bea49922d509d9df43b1",
+        "entry_digest": "d57ac56f4ba0edf2d9bc70180c2d2d71cff6fe7980a363acddea2aa6648b207f",
+        "owners": [
+          "@exact:delivery"
+        ]
+      },
+      {
+        "path": "AGENTS.md",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "7ee5b554f07b7bc83877f68d76c9e52ad8e2ca895bde56f7d6fd4a9dc24bebe9",
+        "entry_digest": "73524a3117bd638a11e2b3ee7a3c85cbc75b159690f704e008f8bca85bd10cbb",
+        "owners": [
+          "@exact:delivery"
+        ]
+      },
+      {
+        "path": "Package.resolved",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "af8fc6346ab876ddecc8a09a2a2c87bd5fa2e972f49528cf8f9732fd52cb4818",
+        "entry_digest": "2118f108978edf58cdd4f3f7ea09e4749b1549d2888c937448f22c0f0cf59ac1",
+        "owners": [
+          "@exact:delivery"
+        ]
+      },
+      {
+        "path": "Package.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "820be358646d88634c192aa6d1e218a7b91c745b3f20d14f7774043541efd560",
+        "entry_digest": "16606736272f9b4ea8914143c6e286a24da501bb602ac68a900874b09bacfaf5",
+        "owners": [
+          "@exact:delivery"
+        ]
+      },
+      {
+        "path": "Sources/ASAViewer/ASADetailView.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "467417929a379990fe53dad7e74a4a8a7209c03358954c3e819e10d93a7ec40d",
+        "entry_digest": "e8cf43d9db48a16558e47185c607d1b58cc765edbec79fac9aa6162f381ebe5f",
+        "owners": [
+          "asa-viewer"
+        ]
+      },
+      {
+        "path": "Sources/ASAViewer/ASAService.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "f436cafbca913fd804ebb242e01df4d2daa11f586c175d953945d0ded1ff520c",
+        "entry_digest": "01898f621192f895709614eedba77fbadb4127497658b9b3a09ca10caec13a11",
+        "owners": [
+          "asa-viewer"
+        ]
+      },
+      {
+        "path": "Sources/ASAViewer/ASAViewer.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "3c68294279935f858203d1f48d97274aa362a30f80b5f0f6cbad406748c9373d",
+        "entry_digest": "a0abedc156ff2aef2e9fa6ac9fa06edd142676f10bf775dfac63eed847021393",
+        "owners": [
+          "asa-viewer"
+        ]
+      },
+      {
+        "path": "Sources/ASAViewer/ASAViewerViewModel.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "1ada6e73f6edc75c432d9d9cd333907a095f55fc100e5a99874f1e7dff6bb1d3",
+        "entry_digest": "55f617013dfaae169df3d0be4310fe3c8cc5b820c8d245a6e7620c3dbeede3bf",
+        "owners": [
+          "asa-viewer"
+        ]
+      },
+      {
+        "path": "Sources/ASAViewer/Models/Asset.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "1f81c57e12fb67fde5ae909646e1aff5e12375a0c9845dfc082031430cd45d15",
+        "entry_digest": "5dd0356b8274ed639bf5a9f47a36124061637e400d167c3db7da8ea28ed34825",
+        "owners": [
+          "asa-viewer"
+        ]
+      },
+      {
+        "path": "Sources/ASAViewer/Models/AssetList.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "0b8f332999d5d02a65d33c19a05ef015381b969593abeae27a95d499051a7550",
+        "entry_digest": "26efa6ac94d947839ebe93da09c2acd995f2b32a0a1c047c2867eb7fb62c8da7",
+        "owners": [
+          "asa-viewer"
+        ]
+      },
+      {
+        "path": "Sources/ASAViewer/Protocols/ASAServiceProtocol.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "a5f2a78f635e570682febdfc9308c8a4970cb130767000ca43dff660cea57aaa",
+        "entry_digest": "3ea6004ecc69622d11a91fdb04aec661ed7b730284da1752038c47e2610775a3",
+        "owners": [
+          "asa-viewer"
+        ]
+      },
+      {
+        "path": "Sources/ASAViewer/RemoteImage/RemoteImage+Application.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "fc1a426039f955fc42c2c1e2953d8ff1b63f17ea6c8104a67c37f403dcce87e3",
+        "entry_digest": "a7710e7a54fd675f162b1fa5dd4b39fefbc43486918c9a5883ac2d3fa2a0bbe8",
+        "owners": [
+          "asa-viewer"
+        ]
+      },
+      {
+        "path": "Sources/ASAViewer/RemoteImage/RemoteImage.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "eb371368c9b855668e3410bbefada8a26bbdf5d27021bc32f6a0563b3679faa4",
+        "entry_digest": "eba6e2c2b9d47dc15834471d309f1023ae889234e9a44ff9a5bc2330be7aa8e1",
+        "owners": [
+          "asa-viewer"
+        ]
+      },
+      {
+        "path": "Sources/ASAViewer/RemoteImage/RemoteImageViewModel.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "41539b6f29b3113fca1bdb5264ec0ecc9e06cb2e795b3f7eabbc9ae64f0e80c6",
+        "entry_digest": "38698d624737ea59014d5b0a0b183abe5a3e8cfbb38ce19dde9e7ab3b50f1780",
+        "owners": [
+          "asa-viewer"
+        ]
+      },
+      {
+        "path": "Sources/ASAViewer/Views/ErrorView.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "92614f5268dea499cd19ceab752f6b23b6a77e586de3202be2fc7dbf8ed165ac",
+        "entry_digest": "27809948541181dcc89570fa9d4453f205c1be3c1b72cff1f158277020b56825",
+        "owners": [
+          "asa-viewer"
+        ]
+      },
+      {
+        "path": "Tests/ASAViewerTests/ASAViewerIntegrationTests.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "12e465c0f5401bbefc9aaeeebcc889f9e92b5fcdf8f3b4beb4c2244658b28a4a",
+        "entry_digest": "b683a24ad2cebd2784852c04c5ce03772ac81ef0dd98bbb8c84b3d42545eb69b",
+        "owners": [
+          "@exact:test"
+        ]
+      },
+      {
+        "path": "Tests/ASAViewerTests/ASAViewerViewModelTests.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "53811476dd63388232e1dfc36fd393fd5727c703fa3c97310f5db6653e518607",
+        "entry_digest": "158ecbb8a85c51b7ae276e6aa500925d2cbd5c3056f009e7258180b9b20fa6c0",
+        "owners": [
+          "@exact:test"
+        ]
+      },
+      {
+        "path": "Tests/ASAViewerTests/AssetModelTests.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "10dab0439e1908ae06eac8c0b13fae5e52399b367a12941eb63bb6c48a73c982",
+        "entry_digest": "ec26bfdc00259bb269ee21792c8a151385e1561e768575277c4856a9f3f192b0",
+        "owners": [
+          "@exact:test"
+        ]
+      },
+      {
+        "path": "Tests/ASAViewerTests/Mocks/MockASAService.swift",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "f95cc1fc342a4d4519efba266c793a5e34d8566b0e81635c130ae9db6453e426",
+        "entry_digest": "518b1f8ce4315e05c69a068f765ecb430721b4e436be55a7bc2ff9da71f36ac8",
+        "owners": [
+          "@exact:test"
+        ]
+      },
+      {
+        "path": "fledge.toml",
+        "kind": "file",
+        "mode": 33188,
+        "payload_digest": "e528b4da851b4587966a36a43d6b41b4bf6bf027c4acfc24e22ee6965acf0805",
+        "entry_digest": "9572c0f55cdbc4ce6b79ccd2e0983df5fd81d8fbbf241277ac7be94f64519d21",
+        "owners": [
+          "@exact:delivery"
+        ]
+      }
+    ]
+  },
   "passed": true,
   "commands": [
     {

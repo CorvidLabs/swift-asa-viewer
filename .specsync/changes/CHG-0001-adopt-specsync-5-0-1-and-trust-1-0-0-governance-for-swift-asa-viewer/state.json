@@ -6,9 +6,10 @@
   "description": "Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for Swift ASA Viewer",
   "kind": "migration",
   "state": "accepted",
+  "canonical_applied": true,
   "base_commit": "67fe31cece9999baa92c449f7a887dc5a3ae183f",
   "created_at": 1783885421,
-  "updated_at": 1784002596,
+  "updated_at": 1784414262,
   "affected_specs": [],
   "affected_paths": [
     "Sources/",
@@ -39,6 +40,107 @@
     "docs"
   ],
   "dependencies": [],
+  "acceptance_owner_corrections": [
+    {
+      "schema_version": 1,
+      "sequence": 1,
+      "path": "Sources/ASAViewer/ASADetailView.swift",
+      "module": "asa-viewer",
+      "actor": "user:0xLeif",
+      "reason": "The historical definition omitted the canonical owner of the already-scoped detail-view input.",
+      "timestamp": 1784413878
+    },
+    {
+      "schema_version": 1,
+      "sequence": 2,
+      "path": "Sources/ASAViewer/ASAService.swift",
+      "module": "asa-viewer",
+      "actor": "user:0xLeif",
+      "reason": "The historical definition omitted the canonical owner of the already-scoped service input.",
+      "timestamp": 1784414066
+    },
+    {
+      "schema_version": 1,
+      "sequence": 3,
+      "path": "Sources/ASAViewer/ASAViewer.swift",
+      "module": "asa-viewer",
+      "actor": "user:0xLeif",
+      "reason": "The historical definition omitted the canonical owner of this already-scoped input.",
+      "timestamp": 1784414101
+    },
+    {
+      "schema_version": 1,
+      "sequence": 4,
+      "path": "Sources/ASAViewer/ASAViewerViewModel.swift",
+      "module": "asa-viewer",
+      "actor": "user:0xLeif",
+      "reason": "The historical definition omitted the canonical owner of this already-scoped input.",
+      "timestamp": 1784414104
+    },
+    {
+      "schema_version": 1,
+      "sequence": 5,
+      "path": "Sources/ASAViewer/Models/Asset.swift",
+      "module": "asa-viewer",
+      "actor": "user:0xLeif",
+      "reason": "The historical definition omitted the canonical owner of this already-scoped input.",
+      "timestamp": 1784414107
+    },
+    {
+      "schema_version": 1,
+      "sequence": 6,
+      "path": "Sources/ASAViewer/Models/AssetList.swift",
+      "module": "asa-viewer",
+      "actor": "user:0xLeif",
+      "reason": "The historical definition omitted the canonical owner of this already-scoped input.",
+      "timestamp": 1784414113
+    },
+    {
+      "schema_version": 1,
+      "sequence": 7,
+      "path": "Sources/ASAViewer/Protocols/ASAServiceProtocol.swift",
+      "module": "asa-viewer",
+      "actor": "user:0xLeif",
+      "reason": "The historical definition omitted the canonical owner of this already-scoped input.",
+      "timestamp": 1784414118
+    },
+    {
+      "schema_version": 1,
+      "sequence": 8,
+      "path": "Sources/ASAViewer/RemoteImage/RemoteImage+Application.swift",
+      "module": "asa-viewer",
+      "actor": "user:0xLeif",
+      "reason": "The historical definition omitted the canonical owner of this already-scoped input.",
+      "timestamp": 1784414124
+    },
+    {
+      "schema_version": 1,
+      "sequence": 9,
+      "path": "Sources/ASAViewer/RemoteImage/RemoteImage.swift",
+      "module": "asa-viewer",
+      "actor": "user:0xLeif",
+      "reason": "The historical definition omitted the canonical owner of this already-scoped input.",
+      "timestamp": 1784414131
+    },
+    {
+      "schema_version": 1,
+      "sequence": 10,
+      "path": "Sources/ASAViewer/RemoteImage/RemoteImageViewModel.swift",
+      "module": "asa-viewer",
+      "actor": "user:0xLeif",
+      "reason": "The historical definition omitted the canonical owner of this already-scoped input.",
+      "timestamp": 1784414139
+    },
+    {
+      "schema_version": 1,
+      "sequence": 11,
+      "path": "Sources/ASAViewer/Views/ErrorView.swift",
+      "module": "asa-viewer",
+      "actor": "user:0xLeif",
+      "reason": "The historical definition omitted the canonical owner of this already-scoped input.",
+      "timestamp": 1784414146
+    }
+  ],
   "answers": {
     "architecture_risk": "yes",
     "public_contract": "no"
