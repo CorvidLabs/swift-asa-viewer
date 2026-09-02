@@ -22,4 +22,4 @@ jobs:
         run: brew install swiftlint
       - name: CorvidLabs Trust gate
         id: trust
-        uses: CorvidLabs/trust@a239f78658e5ad0f12fa230f494890e40c6e4d7b # v1.1.1
+        uses: CorvidLabs/trust@e0272543ad5c88ec75cea1e606cc2efa552af25b # v1.2.0-rc.4
