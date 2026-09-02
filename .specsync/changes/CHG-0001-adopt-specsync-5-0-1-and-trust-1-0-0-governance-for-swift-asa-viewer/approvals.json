@@ -13,6 +13,63 @@
       "timestamp": 1784002596,
       "digest": "b7cc26d75fb16756ae3825b6bfbc7283fca91b5ab03206f51ae158f400354fc5",
       "note": "Closing approval recorded after the canonical delta was applied, strict SpecSync remained at 100 percent, and the native Fledge lane passed SwiftLint, iOS simulator build, all 19 deterministic tests, and both tagged read-only live Pera tests."
+    },
+    {
+      "gate": "definition",
+      "actor": "user:0xLeif",
+      "timestamp": 1784413887,
+      "digest": "b6ddc3a717aeebf39351928c2414d3f4871424307109c5bf22591dfaff4c25bd",
+      "note": null
+    },
+    {
+      "gate": "definition",
+      "actor": "user:0xLeif",
+      "timestamp": 1784414172,
+      "digest": "1762859ad9d59372f12d3183daffe0ca3099acab1b084ce9a3c91d3ff7d79795",
+      "note": null
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1784414262,
+      "digest": "074abae08048d5dc865eed34b73936b7afe456b136a186badbb8a00672a2b912",
+      "note": "Re-acceptance with canonical ownership correction for ASADetailView.swift; canonical deltas were already integrated and were not replayed."
+    }
+  ],
+  "reopenings": [
+    {
+      "schema_version": 1,
+      "change_id": "CHG-0001-adopt-specsync-5-0-1-and-trust-1-0-0-governance-for-swift-asa-viewer",
+      "actor": "user:0xLeif",
+      "reason": "Trust consumer pin moves to the released v1.1.1 immutable commit; the Trust workflow is a governed delivery input of this change, so accepted verification is stale.",
+      "timestamp": 1784412126,
+      "from_state": "accepted",
+      "to_state": "verifying",
+      "superseded_approval": {
+        "gate": "acceptance",
+        "actor": "user:0xLeif",
+        "timestamp": 1784002596,
+        "digest": "b7cc26d75fb16756ae3825b6bfbc7283fca91b5ab03206f51ae158f400354fc5",
+        "note": "Closing approval recorded after the canonical delta was applied, strict SpecSync remained at 100 percent, and the native Fledge lane passed SwiftLint, iOS simulator build, all 19 deterministic tests, and both tagged read-only live Pera tests."
+      },
+      "prior_verification": {
+        "timestamp": 1784002551,
+        "commit": "ae9fa7bce2c8725117238978ab012c6dd1423b31",
+        "contract_digest": "d3ac3bc326ba16da17482d046eb82395fc50e20d786257e7df436c058bef7ac6",
+        "workspace_digest": "05f13673a03a0a65598148f90aa6aaccb9f1510a3fd367f56deee03a0cf058b3",
+        "acceptance_input_digest": "4146372075ca479de672f4a17978138524255970ab9377308b671d9fc532cb6b",
+        "passed": true,
+        "commands": [
+          {
+            "command": "fledge lanes run verify",
+            "success": true,
+            "exit_code": 0
+          }
+        ],
+        "requirement_ids": []
+      },
+      "stale_acceptance_input_digest": "4146372075ca479de672f4a17978138524255970ab9377308b671d9fc532cb6b",
+      "current_acceptance_input_digest": "b86b8fb54667d7d226f68faa9bf16dde1fb5ed9f9d747baa47a7bfc9d61aca33"
     }
   ]
 }
