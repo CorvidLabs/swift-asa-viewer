@@ -52,12 +52,12 @@ private struct AssetRowView: View {
                         ProgressView()
                     }, content: { image in
                         image.resizable()
-                            .aspectRatio(contentMode: .fit)
+                            .scaledToFit()
                     })
                 } else {
                     Image(systemName: "questionmark")
                         .resizable()
-                        .aspectRatio(contentMode: .fit)
+                        .scaledToFit()
                 }
             }
             .frame(width: 32)

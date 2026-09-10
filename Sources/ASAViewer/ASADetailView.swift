@@ -10,7 +10,7 @@ struct ASADetailView: View {
                     if let logo = asset.logo, let url = URL(string: logo) {
                         AsyncImage(url: url) { image in
                             image.resizable()
-                                 .aspectRatio(contentMode: .fit)
+                                 .scaledToFit()
                         } placeholder: {
                             ProgressView()
                         }
